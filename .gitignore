@@ -1,0 +1,53 @@
+# --- Local machine config (contains your SDK path / home folder name) ---
+local.properties
+**/local.properties
+
+# --- IDE files (can contain device names/serials, run configs, local paths) ---
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.fleet/
+
+# --- Build output and caches ---
+.gradle/
+.kotlin/
+build/
+**/build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+output-metadata.json
+
+# --- Signing keys and secrets: never commit ---
+*.jks
+*.keystore
+keystore.properties
+signing.properties
+secrets.properties
+*.p12
+*.pem
+.env
+.env.*
+google-services.json
+
+# --- App data exports (personal progress, usernames) ---
+progress-vault-*.json
+*.db
+*.db-shm
+*.db-wal
+
+# --- Logs, dumps, screenshots from device testing ---
+*.log
+*.hprof
+*.png.tmp
+screenshots/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Always dark: window background matches the Compose background to avoid a white flash. -->
+    <style name="Theme.ProgressVault" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/vault_background</item>
+        <item name="android:colorBackground">@color/vault_background</item>
+        <item name="android:statusBarColor">@color/vault_background</item>
+        <item name="android:navigationBarColor">@color/vault_surface</item>
+    </style>
+</resources>

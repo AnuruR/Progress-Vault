@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="vault_background">#FF0B0F14</color>
+    <color name="vault_surface">#FF121821</color>
+    <color name="vault_cyan">#FF22D3EE</color>
+    <color name="vault_amber">#FFFBBF24</color>
+</resources>

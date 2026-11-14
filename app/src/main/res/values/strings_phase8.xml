@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Notification channels -->
+    <string name="channel_reminders">Reminders</string>
+    <string name="channel_reminders_desc">Daily progress reminder and mid-week pace nudges</string>
+    <string name="channel_recap">Monthly recap</string>
+    <string name="channel_recap_desc">A look back at last month on the 1st</string>
+
+    <!-- Notifications -->
+    <string name="notif_focus">%1$s %2$s %3$s to go</string>
+    <string name="notif_daily_title">Today in the vault</string>
+    <string name="notif_daily_status">%1$d%% this week</string>
+    <string name="notif_daily_done">Every target hit this week. Nice work.</string>
+    <string name="notif_pace_title">Behind pace</string>
+    <string name="notif_pace_body">%1$d%% done with %2$d%% of the week gone. A small push tonight helps.</string>
+    <string name="notif_recap_title">Your %1$s recap</string>
+    <string name="notif_recap_body">In %1$s: %2$s</string>
+    <string name="notif_summary_title">Last week\'s summary</string>
+    <plurals name="notif_summary_body">
+        <item quantity="one">%1$d%% overall · %2$d of %3$d section complete</item>
+        <item quantity="other">%1$d%% overall · %2$d of %3$d sections complete</item>
+    </plurals>
+    <plurals name="notif_summary_tasks">
+        <item quantity="one">%d unfinished task. Roll it over?</item>
+        <item quantity="other">%d unfinished tasks. Roll them over?</item>
+    </plurals>
+
+    <!-- Settings -->
+    <string name="settings_label">settings</string>
+    <string name="settings_targets">Targets &amp; dial</string>
+    <string name="settings_targets_body">Default weekly targets and how much each section counts toward the dial.</string>
+    <string name="settings_target_academics">From module hours</string>
+    <string name="settings_target_value">%1$s %2$s / week</string>
+    <string name="settings_weight">weight %1$s · %2$d%% of dial</string>
+    <string name="settings_excluded">Not in dial</string>
+    <string name="settings_no_target">No target set</string>
+    <string name="settings_not_set">Not set</string>
+    <string name="settings_accounts">Accounts &amp; sync</string>
+    <string name="settings_sync_every">Auto-sync every %1$d h</string>
+    <string name="settings_syncing">Syncing…</string>
+    <string name="settings_reminders">Reminders</string>
+    <string name="settings_reminder_time">Reminder time</string>
+    <string name="settings_reminder_time_body">All reminders are sent around this time</string>
+    <string name="settings_daily">Daily reminder</string>
+    <string name="settings_daily_body">This week\'s progress and what\'s left</string>
+    <string name="settings_pace">Behind-pace nudge</string>
+    <string name="settings_pace_body">Wednesday evening, only if you\'re behind</string>
+    <string name="settings_weekly">Weekly summary</string>
+    <string name="settings_weekly_body">Monday recap with a rollover prompt</string>
+    <string name="settings_monthly">Monthly recap</string>
+    <string name="settings_monthly_body">On the 1st, last month at a glance</string>
+    <string name="settings_backup">Backup</string>
+    <string name="settings_backup_body">Export everything to a JSON file, or restore from one. Tokens are never exported.</string>
+    <string name="settings_version">Progress Vault %1$s</string>
+    <string name="cd_weight_up">Increase dial weight for %1$s</string>
+    <string name="cd_weight_down">Decrease dial weight for %1$s</string>
+    <string name="action_manage_sections">Manage sections</string>
+    <string name="action_export">Export</string>
+    <string name="action_import">Import</string>
+    <string name="action_choose_file">Choose file</string>
+    <string name="action_allow_notifications">Allow notifications</string>
+    <string name="notif_off_title">Notifications are off</string>
+    <string name="notif_off_body">Reminders and recaps can\'t be shown until you allow notifications.</string>
+    <string name="import_confirm_title">Replace all data?</string>
+    <string name="import_confirm_body">Importing replaces everything in the app with the backup\'s contents. Consider exporting first.</string>
+
+    <!-- Backup -->
+    <plurals name="backup_exported">
+        <item quantity="one">Exported %d record</item>
+        <item quantity="other">Exported %d records</item>
+    </plurals>
+    <plurals name="backup_imported">
+        <item quantity="one">Restored %d record</item>
+        <item quantity="other">Restored %d records</item>
+    </plurals>
+    <string name="backup_error_not_backup">That file isn\'t a Progress Vault backup</string>
+    <string name="backup_error_too_new">This backup is from a newer app version</string>
+    <string name="backup_error_corrupt">The backup file is damaged</string>
+    <string name="backup_error_io">Couldn\'t read or write the file</string>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Progress dial: a dim full ring, a bright 3/4 arc, and a centre "vault" dot. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:pathData="M54,32a22,22 0,1 1,0 44a22,22 0,1 1,0 -44"
+        android:strokeWidth="6"
+        android:strokeColor="#1F2A37"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M54,32A22,22 0,1 1,32 54"
+        android:strokeWidth="6"
+        android:strokeColor="#22D3EE"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M54,48a6,6 0,1 1,0 12a6,6 0,1 1,0 -12"
+        android:fillColor="#4ADE80" />
+</vector>

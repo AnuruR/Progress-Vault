@@ -1,0 +1,636 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Progress Vault</string>
+    <string name="app_name_mono" translatable="false">progress_vault</string>
+    <string name="cursor_glyph" translatable="false">_</string>
+    <string name="terminal_label" translatable="false">// %1$s</string>
+
+    <!-- Generic actions -->
+    <string name="action_next">Next</string>
+    <string name="action_back">Back</string>
+    <string name="action_ok">OK</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_save">Save</string>
+    <string name="action_add_module">Add module</string>
+
+    <!-- Built-in sections & units (seeded into the DB; user can rename) -->
+    <string name="section_academics">Academics</string>
+    <string name="section_linkedin">LinkedIn Posts</string>
+    <string name="section_leetcode">LeetCode</string>
+    <string name="section_courses">Courses</string>
+    <string name="section_github">GitHub</string>
+    <string name="section_skills">Skills</string>
+    <string name="unit_hours">hours</string>
+    <string name="unit_posts">posts</string>
+    <string name="unit_problems">problems</string>
+    <string name="unit_lessons">lessons</string>
+    <string name="unit_commits">commits</string>
+    <string name="unit_skills">skills</string>
+
+    <!-- Colours -->
+    <string name="color_cyan">Cyan</string>
+    <string name="color_green">Green</string>
+    <string name="color_purple">Purple</string>
+    <string name="color_amber">Amber</string>
+    <string name="color_pink">Pink</string>
+    <string name="color_github_green">GitHub green</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_custom">Custom colour</string>
+
+    <!-- Navigation -->
+    <string name="nav_dashboard">Dashboard</string>
+    <string name="nav_planner">Planner</string>
+    <string name="nav_vault">Vault</string>
+    <string name="nav_skills">Skills</string>
+    <string name="nav_settings">Settings</string>
+
+    <!-- Onboarding -->
+    <string name="onboarding_step_of">Step %1$d of %2$d</string>
+    <string name="onboarding_get_started">Get started</string>
+    <string name="onboarding_finish">Enter the vault</string>
+    <string name="onboarding_skip_semester">Skip</string>
+    <string name="onboarding_welcome_label">init</string>
+    <string name="onboarding_welcome_body">Your personal progress tracker. Hit weekly targets across studies, code and career, then look back months later and see how far you\'ve come.</string>
+    <string name="onboarding_feature_track_title">Weekly targets</string>
+    <string name="onboarding_feature_track_body">One dial for the whole week, a bar for every area of your life.</string>
+    <string name="onboarding_feature_sync_title">Auto-sync</string>
+    <string name="onboarding_feature_sync_body">LeetCode and GitHub activity are pulled in for you, with manual logging as a fallback.</string>
+    <string name="onboarding_feature_history_title">Then vs now</string>
+    <string name="onboarding_feature_history_body">Every log is kept, so you can compare yourself today with any point in the past.</string>
+
+    <string name="onboarding_accounts_label">accounts</string>
+    <string name="onboarding_accounts_title">Connect your profiles</string>
+    <string name="onboarding_accounts_body">Used to auto-sync solved problems and commits. Both are optional and can be changed later in Settings.</string>
+    <string name="onboarding_github_token_hint">You can add a personal access token later in Settings for richer stats.</string>
+    <string name="field_leetcode_username">LeetCode username</string>
+    <string name="field_github_username">GitHub username</string>
+    <string name="field_optional">Optional</string>
+
+    <string name="onboarding_semester_label">academics</string>
+    <string name="onboarding_semester_title">Current semester</string>
+    <string name="onboarding_semester_body">Academics progress is tracked per module in study hours. Old semesters are archived, never deleted.</string>
+    <string name="onboarding_semester_toggle">I\'m studying this semester</string>
+    <string name="onboarding_semester_skipped">No problem — you can start a semester any time from the Academics section.</string>
+    <string name="field_semester_name">Semester name</string>
+    <string name="field_semester_name_hint">e.g. Y2S1</string>
+    <string name="field_start_date">Start date</string>
+    <string name="field_end_date">End date</string>
+
+    <string name="onboarding_modules_label">modules</string>
+    <string name="onboarding_modules_title">Modules in %1$s</string>
+    <string name="onboarding_modules_body">Give each module a weekly study-hour target. Each one gets its own progress bar.</string>
+    <string name="onboarding_modules_empty">No modules yet. Add the modules you\'re taking this semester.</string>
+    <string name="onboarding_modules_total">Academics target: %1$s h / week</string>
+    <string name="module_summary">%1$s h / week</string>
+    <plurals name="module_summary_with_credits">
+        <item quantity="one">%1$s h / week · %2$d credit</item>
+        <item quantity="other">%1$s h / week · %2$d credits</item>
+    </plurals>
+    <string name="module_dialog_add">Add module</string>
+    <string name="module_dialog_edit">Edit module</string>
+    <string name="field_module_code">Module code</string>
+    <string name="field_module_code_hint">e.g. CS2040</string>
+    <string name="field_module_name">Module name</string>
+    <string name="field_module_name_hint">e.g. Data Structures</string>
+    <string name="field_hours_per_week">Hours / week</string>
+    <string name="field_credits">Credits</string>
+    <string name="field_colour">Colour</string>
+
+    <string name="onboarding_targets_label">targets</string>
+    <string name="onboarding_targets_title">Weekly targets</string>
+    <string name="onboarding_targets_body">Set what a good week looks like. The switch controls whether a section counts toward your weekly dial.</string>
+    <string name="onboarding_target_unit">%1$s / week</string>
+    <string name="onboarding_target_academics">%1$s h / week · from modules</string>
+    <string name="onboarding_targets_footer">A target of 0 keeps a section tracked and visible but out of the dial. Targets, weights and sections can all be edited later.</string>
+
+    <!-- Validation -->
+    <string name="error_required">Required</string>
+    <string name="error_invalid_username">That doesn\'t look like a valid username</string>
+    <string name="error_invalid_number">Enter a number greater than 0</string>
+    <string name="error_end_before_start">End date must be after the start date</string>
+
+    <!-- Dashboard -->
+    <string name="dashboard_this_week">this week</string>
+    <string name="dashboard_sections_label">sections</string>
+    <string name="week_range">%1$s – %2$s</string>
+    <plurals name="days_left">
+        <item quantity="one">%d day left</item>
+        <item quantity="other">%d days left</item>
+    </plurals>
+    <string name="section_academics_no_modules">add modules to set a target</string>
+    <string name="chip_not_in_dial">not in dial</string>
+
+    <!-- Upcoming tabs -->
+
+    <!-- Accessibility -->
+    <string name="cd_change_date">Change %1$s</string>
+    <string name="cd_edit_item">Edit %1$s</string>
+    <string name="cd_delete_item">Delete %1$s</string>
+    <string name="cd_include_in_dial">Include %1$s in the weekly dial</string>
+    <string name="cd_weekly_target_for">Weekly target for %1$s, in %2$s</string>
+
+    <!-- Phase 2: dashboard -->
+    <string name="percent_value">%1$d%%</string>
+    <string name="dial_label">weekly</string>
+    <string name="dashboard_past_week">past week</string>
+    <string name="dashboard_read_only_archived">Archived · read-only</string>
+    <string name="dashboard_read_only_live">Read-only</string>
+    <string name="dashboard_no_sections">No visible sections. Unhide or add one in Settings.</string>
+    <string name="dashboard_no_dial_sections">No section counts toward the dial yet — give one a target above 0.</string>
+    <string name="action_this_week">This week</string>
+    <string name="action_undo">Undo</string>
+    <string name="action_log">Log it</string>
+    <string name="pace_ahead">Ahead of pace</string>
+    <string name="pace_on">On pace</string>
+    <string name="pace_behind">Behind pace</string>
+    <string name="pace_detail">%1$d%% done · %2$d%% of week elapsed</string>
+    <string name="progress_of_target">%1$s / %2$s %3$s</string>
+    <string name="progress_no_target">%1$s %2$s · no target</string>
+    <string name="module_hours_progress">%1$s/%2$sh</string>
+    <string name="chip_synced_ago">synced %1$s</string>
+    <string name="chip_never_synced">never synced</string>
+    <string name="chip_sync_error">sync error</string>
+    <string name="snack_logged">+%1$s logged to %2$s</string>
+    <string name="snack_section_complete">%1$s target hit! 🎯</string>
+    <string name="snack_dial_complete" formatted="false">100% week. Everything done! 🚀</string>
+    <string name="log_label">log</string>
+    <string name="log_title">Log %1$s</string>
+    <string name="log_amount">Amount (%1$s)</string>
+    <string name="log_post_topic">Post topic</string>
+    <string name="log_post_url">Post URL</string>
+    <string name="log_note">Note</string>
+    <string name="log_pick_module">Module</string>
+    <string name="log_no_modules">Add modules to your semester before logging study hours.</string>
+    <string name="error_pick_module">Pick a module</string>
+    <string name="cd_dial">Weekly completion: %1$d%%</string>
+    <string name="cd_previous_week">Previous week</string>
+    <string name="cd_next_week">Next week</string>
+    <string name="cd_quick_log">Log one for %1$s</string>
+    <string name="cd_section_progress">%1$s progress: %2$d%%</string>
+    <string name="cd_target_reached">Target reached</string>
+
+    <!-- Phase 3 -->
+    <string name="action_delete">Delete</string>
+    <string name="action_add_post">Add post</string>
+    <string name="action_log_progress">Log progress</string>
+    <string name="action_override_week">Override</string>
+    <string name="action_reset_to_default">Reset to default</string>
+    <string name="action_add_section">Add section</string>
+    <string name="action_move_up">Move up</string>
+    <string name="action_move_down">Move down</string>
+    <string name="action_start_semester">Start semester</string>
+    <string name="action_start_new_semester">Start new semester</string>
+    <string name="action_add_deadline">Add deadline</string>
+    <string name="action_add_course">Add course</string>
+    <string name="action_plus_lesson">+1 lesson</string>
+    <string name="section_missing_title">Section not found</string>
+    <string name="section_missing_body">It may have been deleted. Its history is still kept.</string>
+    <string name="section_history_label">history</string>
+    <string name="section_posts_label">posts</string>
+    <string name="section_no_logs">Nothing logged yet.</string>
+    <string name="section_no_posts">No posts logged yet. Shipped one? Add it!</string>
+    <string name="section_target_from_modules">target from modules</string>
+    <string name="chip_hidden">hidden</string>
+    <string name="chip_imported">imported</string>
+    <string name="chip_custom">custom</string>
+    <string name="chip_derived">derived</string>
+    <string name="chip_archived">archived</string>
+    <string name="override_active">Overridden this week · default %1$s</string>
+    <string name="override_none">Using the default target</string>
+    <string name="override_title">This week\'s target</string>
+    <string name="override_body">Applies to this week only. The default stays %1$s %2$s.</string>
+    <string name="override_field">Target (%1$s)</string>
+    <string name="log_amount_signed">+%1$s</string>
+    <string name="log_when">%1$s · %2$s</string>
+    <string name="delete_log_title">Delete this entry?</string>
+    <string name="delete_log_body">It will be removed from this week and from your lifetime totals.</string>
+    <string name="section_new_title">New section</string>
+    <string name="section_edit_title">Edit section</string>
+    <string name="field_section_name">Name</string>
+    <string name="field_unit">Unit</string>
+    <string name="field_unit_hint">e.g. sessions, pages, km</string>
+    <string name="field_weekly_target">Weekly target</string>
+    <string name="field_dial_weight">Dial weight</string>
+    <string name="field_icon">Icon</string>
+    <string name="field_include_in_dial">Include in weekly dial</string>
+    <string name="include_needs_target">Needs a target above 0</string>
+    <string name="field_hidden">Hidden</string>
+    <string name="field_hidden_hint">Hidden sections keep all their history.</string>
+    <string name="section_edit_academics_hint">The weekly target is the sum of your active modules\' study hours.</string>
+    <string name="section_edit_derived_hint">This section is built automatically and is never part of the dial.</string>
+    <string name="section_edit_weight_hint">Weight sets how much this section counts in the dial (1 = equal).</string>
+    <string name="delete_section_title">Delete %1$s?</string>
+    <string name="delete_section_body">The section disappears, but everything you logged in it stays in your lifetime history.</string>
+    <string name="manage_sections_title">Manage sections</string>
+    <string name="manage_sections_hint">drag the handle to reorder · tap to edit</string>
+    <string name="academics_empty_title">No active semester</string>
+    <string name="academics_empty_body">Start a semester and add your modules to track study hours per module.</string>
+    <string name="academics_active_semester">active semester</string>
+    <string name="academics_this_week">This week: %1$s / %2$s h</string>
+    <string name="academics_deadlines">deadlines</string>
+    <string name="academics_no_deadlines">No upcoming deadlines.</string>
+    <string name="academics_archived">archived semesters</string>
+    <string name="dashboard_no_modules">No modules in this semester yet.</string>
+    <string name="date_range">%1$s → %2$s</string>
+    <string name="semester_week_of">Week %1$d of %2$d</string>
+    <string name="semester_total_hours">%1$s h studied</string>
+    <string name="module_lifetime">%1$s h total</string>
+    <plurals name="module_lifetime_with_credits">
+        <item quantity="one">%1$s h total · %2$d credit</item>
+        <item quantity="other">%1$s h total · %2$d credits</item>
+    </plurals>
+    <string name="module_in_use">This module has logged hours, so it\'s kept for your history.</string>
+    <string name="delete_module_title">Delete %1$s?</string>
+    <string name="delete_module_body">Only modules without logged hours can be deleted.</string>
+    <string name="new_semester_archive_note">%1$s will be archived. Its modules and hours stay browsable in history.</string>
+    <string name="new_semester_confirm_title">Archive current semester?</string>
+    <string name="deadline_add_title">Add deadline</string>
+    <string name="deadline_assignment">Assignment</string>
+    <string name="deadline_exam">Exam</string>
+    <string name="deadline_quiz">Quiz</string>
+    <string name="deadline_project">Project</string>
+    <string name="deadline_other">Other</string>
+    <string name="deadline_meta">%1$s · %2$s · %3$s</string>
+    <string name="deadline_history_row">%1$s · %2$s · %3$s</string>
+    <string name="deadline_today">Due today</string>
+    <string name="deadline_tomorrow">Due tomorrow</string>
+    <plurals name="deadline_in_days">
+        <item quantity="one">in %d day</item>
+        <item quantity="other">in %d days</item>
+    </plurals>
+    <plurals name="deadline_overdue">
+        <item quantity="one">overdue by %d day</item>
+        <item quantity="other">overdue by %d days</item>
+    </plurals>
+    <string name="field_deadline_title">Title</string>
+    <string name="field_deadline_title_hint">e.g. Lab 3 report</string>
+    <string name="field_due_date">Due date</string>
+    <string name="platform_coursera">Coursera</string>
+    <string name="platform_udemy">Udemy</string>
+    <string name="platform_youtube">YouTube</string>
+    <string name="platform_other">Other</string>
+    <string name="course_in_progress">In progress</string>
+    <string name="course_completed">Completed</string>
+    <string name="course_paused">Paused</string>
+    <string name="courses_empty_title">No courses yet</string>
+    <string name="courses_empty_body">Add a Coursera, Udemy or YouTube course and log lessons as you go.</string>
+    <plurals name="course_lessons_of">
+        <item quantity="one">%1$s of %2$d lesson · %3$d%%</item>
+        <item quantity="other">%1$s of %2$d lessons · %3$d%%</item>
+    </plurals>
+    <string name="course_lessons_done">%1$s lessons done</string>
+    <string name="course_new_title">New course</string>
+    <string name="course_edit_title">Edit course</string>
+    <string name="field_course_title">Course title</string>
+    <string name="field_platform">platform</string>
+    <string name="field_status">status</string>
+    <string name="field_course_url">Course URL</string>
+    <string name="field_total_lessons">Total lessons</string>
+    <string name="field_finish_date">Finish date</string>
+    <string name="field_not_set">Not set</string>
+    <string name="field_skill_tags">skill tags</string>
+    <string name="field_add_tag">Add skill tag</string>
+    <string name="field_add_tag_hint">e.g. Kotlin, SQL</string>
+    <string name="field_certificate_url">Certificate link</string>
+    <string name="delete_course_title">Delete %1$s?</string>
+    <string name="delete_course_body">The course is removed, but lessons you logged still count in your lifetime totals.</string>
+    <string name="snack_lesson_logged">+1 lesson · %1$s</string>
+    <string name="cd_open_link">Open link</string>
+    <string name="cd_open_certificate">Open certificate</string>
+    <string name="cd_drag_handle">Drag to reorder %1$s</string>
+    <string name="cd_show_section">Show %1$s</string>
+    <string name="cd_hide_section">Hide %1$s</string>
+    <string name="cd_icon_option">Icon %1$s</string>
+    <string name="cd_log_hours">Log hours for %1$s</string>
+    <string name="cd_remove_tag">Remove %1$s</string>
+    <string name="cd_add_tag">Add tag</string>
+
+    <!-- Phase 4: planner & rollover -->
+    <string name="planner_label">planner</string>
+    <string name="planner_done_count">done: %1$d / %2$d</string>
+    <string name="planner_empty">No tasks this week. Tap “Add task” to plan something.</string>
+    <string name="planner_unscheduled">Unscheduled</string>
+    <string name="planner_unscheduled_short">—</string>
+    <string name="planner_next_week">Next wk</string>
+    <string name="planner_today">today</string>
+    <string name="planner_free">free</string>
+    <string name="planner_rolled">rolled over</string>
+    <string name="planner_day_header">%1$s · %2$s</string>
+    <string name="action_add_task">Add task</string>
+    <string name="action_auto_balance">Auto-balance remaining tasks</string>
+    <string name="action_apply">Apply</string>
+    <string name="action_roll_over">Roll over</string>
+    <string name="action_leave_them">Leave them</string>
+    <string name="balance_title">Auto-balance preview</string>
+    <string name="balance_body">Overdue tasks move to today; the rest spread evenly over the remaining days, nearest deadlines first.</string>
+    <string name="balance_nothing">Your week is already balanced.</string>
+    <string name="balance_move">%1$s → %2$s</string>
+    <plurals name="rollover_banner">
+        <item quantity="one">%d unfinished task from last week. Roll it into this week?</item>
+        <item quantity="other">%d unfinished tasks from last week. Roll them into this week?</item>
+    </plurals>
+    <string name="task_new">New task</string>
+    <string name="task_edit">Edit task</string>
+    <string name="task_no_section">None</string>
+    <string name="field_task_title">Task</string>
+    <string name="field_section">section</string>
+    <string name="field_day">day</string>
+    <string name="field_priority">priority</string>
+    <string name="field_linked_deadline">linked deadline</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_high">High</string>
+    <string name="status_todo">To do</string>
+    <string name="status_done">Done</string>
+    <string name="status_skipped">Skipped</string>
+    <string name="cd_add_task_to">Add task to %1$s</string>
+    <string name="cd_move_to">Move to %1$s</string>
+    <string name="cd_move_to_next_week">Move to next week</string>
+    <string name="channel_weekly">Weekly summary</string>
+    <string name="channel_weekly_desc">Monday summary and rollover of unfinished tasks</string>
+    <string name="notif_rollover_title">New week, fresh dial</string>
+    <plurals name="notif_rollover_body">
+        <item quantity="one">Last week finished at %1$d%%. %2$d task is unfinished — roll it into this week?</item>
+        <item quantity="other">Last week finished at %1$d%%. %2$d tasks are unfinished — roll them into this week?</item>
+    </plurals>
+    <string name="planner_drag_hint">long-press a task and drag it onto a day</string>
+    <string name="planner_drop_somewhere">Drop on a day</string>
+    <string name="planner_deadline_tag">deadline</string>
+    <string name="action_move_to_this_week">Move to this week</string>
+    <plurals name="past_week_unfinished">
+        <item quantity="one">%d task was left unfinished that week.</item>
+        <item quantity="other">%d tasks were left unfinished that week.</item>
+    </plurals>
+    <!-- Phase 5: sync -->
+    <string name="connections_title">Connections</string>
+    <string name="connections_intro">Progress Vault reads your public LeetCode and GitHub activity. Everything is stored on this device; a failed sync never removes data.</string>
+    <string name="connections_leetcode">LeetCode</string>
+    <string name="connections_github">GitHub</string>
+    <string name="connections_leetcode_note">LeetCode\'s public API only lists your 20 most recent accepted solutions, so sync at least daily to catch every solve.</string>
+    <string name="connections_token_saved">token saved · encrypted</string>
+    <string name="connections_token_none">no token · public activity only</string>
+    <string name="connections_token_label">Personal access token (optional)</string>
+    <string name="connections_token_replace">Replace token</string>
+    <string name="connections_token_note">With a token you get your exact contribution calendar (incl. private contributions if enabled on your profile). Without one, contributions are estimated from public events for the last 90 days. A fine-grained token with no extra permissions is enough.</string>
+    <string name="connections_token_create">Create a token on GitHub</string>
+    <string name="connections_interval">Background sync every</string>
+    <string name="connections_interval_note">Runs only with a network connection. Sync also runs each time you open the app.</string>
+    <string name="connections_saved">Saved</string>
+    <string name="interval_hours">%1$dh</string>
+    <string name="action_save_and_sync">Save &amp; sync</string>
+    <string name="action_sync_now">Sync now</string>
+    <string name="action_remove_token">Remove</string>
+    <string name="action_connections">Connections</string>
+    <string name="sync_not_connected">No username set</string>
+    <string name="sync_done">synced</string>
+    <string name="sync_just_now">just now</string>
+    <string name="sync_result">%1$s: %2$s</string>
+    <string name="sync_error_not_configured">Add a username first</string>
+    <string name="sync_error_user_not_found">User not found, check the username</string>
+    <string name="sync_error_unauthorized">Token rejected, replace or remove it</string>
+    <string name="sync_error_rate_limited">Rate limited, will retry later</string>
+    <string name="sync_error_network">Offline, will retry when connected</string>
+    <string name="sync_error_server">Server error, will retry later</string>
+    <string name="sync_error_bad_response">Unexpected response from server</string>
+    <string name="lc_solved_this_week">solved this week</string>
+    <string name="lc_no_solves">No accepted solutions this week yet.</string>
+    <string name="lc_totals">all time</string>
+    <string name="lc_easy">easy</string>
+    <string name="lc_medium">medium</string>
+    <string name="lc_hard">hard</string>
+    <string name="lc_total">total</string>
+    <string name="gh_this_week">contributions this week</string>
+    <plurals name="cd_contribution_day">
+        <item quantity="one">%1$s: %2$d contribution</item>
+        <item quantity="other">%1$s: %2$d contributions</item>
+    </plurals>
+    <string name="cd_open_problem">Open %1$s on LeetCode</string>
+    <string name="sync_manual_note">Synced items count automatically. Use Log progress only for things the sync can\'t see.</string>
+    <!-- Phase 6: skills -->
+    <string name="skills_label">skills</string>
+    <plurals name="skills_count">
+        <item quantity="one">%d skill tracked</item>
+        <item quantity="other">%d skills tracked</item>
+    </plurals>
+    <string name="skills_empty_title">No skills yet</string>
+    <string name="skills_empty_body">Skills build themselves from your solved LeetCode problems\' topic tags and your courses\' skill tags. You can also add your own.</string>
+    <string name="skill_level_beginner">beginner</string>
+    <string name="skill_level_practicing">practicing</string>
+    <string name="skill_level_strong">strong</string>
+    <string name="skill_source_leetcode">LeetCode</string>
+    <string name="skill_source_course">Course</string>
+    <string name="skill_source_manual">Manual</string>
+    <string name="skills_rusty_title">getting rusty</string>
+    <string name="skills_rusty_body">Not practised in over 30 days.</string>
+    <string name="skills_new_title">newly gained</string>
+    <string name="skills_new_body">First seen in the last 30 days.</string>
+    <string name="skills_insights">review</string>
+    <string name="skills_rules_note" tools:ignore="PluralsCandidate">On-device rules: %1$d point per solved problem, %2$d per course (%3$d if completed), %4$d for adding it yourself.</string>
+    <plurals name="insight_rusty">
+        <item quantity="one">%1$s hasn\'t been practised for %2$d day. A quick problem will keep it fresh.</item>
+        <item quantity="other">%1$s hasn\'t been practised for %2$d days. A quick problem will keep it fresh.</item>
+    </plurals>
+    <plurals name="insight_close">
+        <item quantity="one">%1$s is %2$d practice point away from %3$s.</item>
+        <item quantity="other">%1$s is %2$d practice points away from %3$s.</item>
+    </plurals>
+    <string name="filter_all">All</string>
+    <string name="filter_rusty">rusty</string>
+    <string name="filter_new">new</string>
+    <string name="filter_courses">Courses</string>
+    <string name="skills_filter_empty">No skills match this filter.</string>
+    <plurals name="skill_problems">
+        <item quantity="one">%d problem</item>
+        <item quantity="other">%d problems</item>
+    </plurals>
+    <plurals name="skill_courses">
+        <item quantity="one">%d course</item>
+        <item quantity="other">%d courses</item>
+    </plurals>
+    <string name="skill_manual_only">added by you</string>
+    <string name="skill_first_seen">first seen %1$s</string>
+    <string name="skill_last_practiced">last practised %1$s</string>
+    <string name="skill_sources">sources</string>
+    <string name="skill_courses_label">courses</string>
+    <string name="skill_timeline">timeline</string>
+    <string name="skill_practiced_note">This creates a manual entry so the date is remembered.</string>
+    <string name="skill_delete_title">Delete skill?</string>
+    <string name="skill_delete_body">%1$s will be removed.</string>
+    <string name="skill_delete_body_derived">Your manual entry for %1$s will be removed. It stays in the list because LeetCode or a course also teaches it.</string>
+    <string name="skill_add_title">Add skill</string>
+    <string name="skill_edit_title">Edit skill</string>
+    <string name="field_skill_name">Skill</string>
+    <string name="field_skill_name_hint">e.g. Kotlin, System design</string>
+    <string name="field_first_seen">First seen</string>
+    <string name="field_last_practiced">Last practised</string>
+    <string name="field_notes">Notes</string>
+    <string name="error_practiced_before_seen">Last practised can\'t be before first seen</string>
+    <string name="action_add_skill">Add skill</string>
+    <string name="action_practiced_today">I practised this today</string>
+    <string name="action_close">Close</string>
+    <string name="action_edit">Edit</string>
+    <string name="unknown">unknown</string>
+    <string name="today">today</string>
+    <string name="yesterday">yesterday</string>
+    <plurals name="days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+    <!-- Phase 7: then vs now -->
+    <string name="vault_label">then vs now</string>
+    <string name="vault_title">How far you\'ve come</string>
+    <string name="vault_since">Tracking since %1$s</string>
+    <string name="vault_lifetime">lifetime</string>
+    <string name="lifetime_problems">problems solved</string>
+    <string name="lifetime_commits">commits</string>
+    <string name="lifetime_posts">posts</string>
+    <string name="lifetime_lessons">lessons</string>
+    <string name="lifetime_hours">study hours</string>
+    <string name="lifetime_skills">skills</string>
+    <string name="lifetime_courses">courses completed</string>
+    <string name="lifetime_weeks">weeks tracked</string>
+    <string name="vault_records">personal records</string>
+    <string name="record_best_week">Best week</string>
+    <string name="record_best_week_value">%1$d%% · %2$s</string>
+    <string name="record_day_streak">Longest daily streak</string>
+    <string name="record_current_streak">Current streak</string>
+    <string name="record_perfect_streak" formatted="false">Longest 100% streak</string>
+    <string name="record_best_month">Most active month</string>
+    <string name="record_best_month_value">%1$s · %2$s pts</string>
+    <string name="record_none">none yet</string>
+    <string name="vault_heatmap">activity heatmap</string>
+    <string name="cd_previous_year">Previous year</string>
+    <string name="cd_next_year">Next year</string>
+    <string name="heatmap_selected">%1$s: %2$s activity points</string>
+    <string name="heatmap_less">less</string>
+    <string name="heatmap_more">more</string>
+    <string name="vault_compare">compare</string>
+    <string name="vault_compare_then">Then</string>
+    <string name="vault_now">now</string>
+    <string name="vault_change">change</string>
+    <string name="preset_1m">1 month ago</string>
+    <string name="preset_3m">3 months ago</string>
+    <string name="preset_6m">6 months ago</string>
+    <string name="preset_semester">Semester start</string>
+    <string name="preset_first_day">First day</string>
+    <string name="vault_new_skills">skills you have now but didn\'t then</string>
+    <string name="vault_lc_breakdown">leetcode difficulty</string>
+    <string name="vault_no_data">no data</string>
+    <string name="vault_trends">trends</string>
+    <string name="vault_trend_completion">Weekly completion</string>
+    <string name="vault_trend_need_weeks">Trends appear after your second week.</string>
+    <string name="vault_trend_output">Output</string>
+    <string name="vault_weeks">Weeks</string>
+    <string name="vault_months">Months</string>
+    <string name="vault_trend_all_note">All sections combined, in activity points (1 problem, post, lesson, commit or hour = 1 point).</string>
+    <string name="cd_completion_chart" tools:ignore="PluralsCandidate">Weekly completion over %1$d weeks, latest %2$d percent</string>
+    <string name="cd_output_chart" tools:ignore="PluralsCandidate">Output over %1$d periods, total %2$s</string>
+    <string name="vault_milestones">milestones</string>
+    <string name="vault_next_up">Next up</string>
+    <string name="vault_no_milestones">Your first milestone is one problem, post or lesson away.</string>
+    <string name="ms_perfect_week" formatted="false">First 100% week</string>
+    <string name="ms_semester">Completed semester %1$s</string>
+    <string name="vault_recap">monthly recap</string>
+    <string name="recap_empty">Nothing logged this month.</string>
+    <string name="recap_hours">%1$s study hours</string>
+    <string name="recap_best_week">best week %1$d%%</string>
+    <string name="cd_previous_month">Previous month</string>
+    <string name="cd_next_month">Next month</string>
+    <plurals name="heatmap_summary">
+        <item quantity="one">%1$d active day in %2$d</item>
+        <item quantity="other">%1$d active days in %2$d</item>
+    </plurals>
+    <plurals name="days">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+    <plurals name="weeks">
+        <item quantity="one">%d week</item>
+        <item quantity="other">%d weeks</item>
+    </plurals>
+    <plurals name="diff_problems">
+        <item quantity="one">+%d problem</item>
+        <item quantity="other">+%d problems</item>
+    </plurals>
+    <plurals name="diff_commits">
+        <item quantity="one">+%d commit</item>
+        <item quantity="other">+%d commits</item>
+    </plurals>
+    <plurals name="diff_lessons">
+        <item quantity="one">+%d lesson</item>
+        <item quantity="other">+%d lessons</item>
+    </plurals>
+    <plurals name="diff_posts">
+        <item quantity="one">+%d post</item>
+        <item quantity="other">+%d posts</item>
+    </plurals>
+    <plurals name="diff_skills">
+        <item quantity="one">+%d skill</item>
+        <item quantity="other">+%d skills</item>
+    </plurals>
+    <plurals name="diff_courses">
+        <item quantity="one">+%d course completed</item>
+        <item quantity="other">+%d courses completed</item>
+    </plurals>
+    <plurals name="ms_problems">
+        <item quantity="one">First problem solved</item>
+        <item quantity="other">%d problems solved</item>
+    </plurals>
+    <plurals name="ms_commits">
+        <item quantity="one">%d commit</item>
+        <item quantity="other">%d commits</item>
+    </plurals>
+    <plurals name="ms_posts">
+        <item quantity="one">First LinkedIn post</item>
+        <item quantity="other">%d LinkedIn posts</item>
+    </plurals>
+    <plurals name="ms_lessons">
+        <item quantity="one">%d lesson</item>
+        <item quantity="other">%d lessons completed</item>
+    </plurals>
+    <plurals name="ms_hours">
+        <item quantity="one">%d study hour</item>
+        <item quantity="other">%d study hours</item>
+    </plurals>
+    <plurals name="ms_courses">
+        <item quantity="one">First course completed</item>
+        <item quantity="other">%d courses completed</item>
+    </plurals>
+    <plurals name="ms_skills">
+        <item quantity="one">%d skill</item>
+        <item quantity="other">%d skills gained</item>
+    </plurals>
+    <plurals name="ms_perfect_streak">
+        <item quantity="one">%d-week streak at 100%%</item>
+        <item quantity="other">%d-week streak at 100%%</item>
+    </plurals>
+    <plurals name="recap_active_days">
+        <item quantity="one">Active on %d day</item>
+        <item quantity="other">Active on %d days</item>
+    </plurals>
+    <plurals name="recap_problems">
+        <item quantity="one">%d problem</item>
+        <item quantity="other">%d problems</item>
+    </plurals>
+    <plurals name="recap_commits">
+        <item quantity="one">%d commit</item>
+        <item quantity="other">%d commits</item>
+    </plurals>
+    <plurals name="recap_posts">
+        <item quantity="one">%d post</item>
+        <item quantity="other">%d posts</item>
+    </plurals>
+    <plurals name="recap_lessons">
+        <item quantity="one">%d lesson</item>
+        <item quantity="other">%d lessons</item>
+    </plurals>
+    <plurals name="recap_courses">
+        <item quantity="one">%d course finished</item>
+        <item quantity="other">%d courses finished</item>
+    </plurals>
+    <string name="vault_jump">jump to</string>
+    <string name="vault_jump_compare">Compare</string>
+    <string name="vault_jump_heatmap">Heatmap</string>
+    <string name="vault_jump_trends">Trends</string>
+    <string name="vault_jump_milestones">Milestones</string>
+    <string name="vault_jump_recap">Recap</string>
+</resources>
